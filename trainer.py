@@ -1,3 +1,9 @@
+# Code to detect face, and train them so that they can be used during prediction.
+#
+# The path to the opencv has to be customized according to your installation of OpenCV package.
+#
+#
+
 import cv2,os
 import numpy as np
 from PIL import Image
