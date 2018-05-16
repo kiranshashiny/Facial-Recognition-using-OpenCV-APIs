@@ -20,18 +20,21 @@ User will have to provide the input to be predicted and if the image matches the
 ### Prerequisites :
 
 Install Python 3.x ( http://docs.python-guide.org/en/latest/starting/install3/linux/)
+
 Install Pip 
-Install cv2 ( Refer to recent links in google )
+
+Install cv2 ( Google )
 
 The dataset folder should contain images to be trained. 
 
-Currently the images (jpegs) belong to that of Trump and HH Dalai Lama.
+
+### Code :
+
+Currently the images (jpegs) belong to that of Trump and HH Dalai Lama are stored in the dataSet folder.
 
 You will notice that the file names/Ids on the Trump data set has a common '1' and HH Dalai Lama is set to '9', This distinguishes the labels for the faces and will help during prediction.
 
 If a new data set is to be created then enter an unique id/label for it as part of the file name.
-
-To create a new dataSet, create images with <Image>.<UniqID>.1.jpeg 
 
 e.g:  
 1. Einstein.8.1.jpeg
@@ -53,6 +56,8 @@ The blue box around the face is what gets detected by the Python API.
 
 ![screen shot 2018-05-16 at 3 20 06 pm](https://user-images.githubusercontent.com/14288989/40110079-b66f67f4-591c-11e8-85ce-f4470d511395.png)
 
+
+Another sample :
 
 ![screen shot 2018-05-16 at 3 18 41 pm](https://user-images.githubusercontent.com/14288989/40110080-b69abe72-591c-11e8-8a42-5feba8d3a323.png)
 
