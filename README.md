@@ -45,14 +45,14 @@ e.g:
 ### Execute
 
 1. python3 trainer.py
- This will create the trainner.yml flat file containing the parameters of the images.
+ This will create the ```trainner.yml``` flat file containing the parameters of the images.
 
 2. python3 detector_image.py  trump.jpeg
 	This will detect the image in the trained library and if it can recognize then a rectangle is printed on the face, along with the name.
 
 This can be further customized to user's specs. ( Just change the Id in the image.jpeg to whatever number you want.  e.g: Edison could have a label as  11, Think of this as a common label to the images. )
 
-The blue box around the face is what gets detected by the Python API.
+The blue box around the face is what gets detected by the Python Open CV API.
 
 ![screen shot 2018-05-16 at 3 20 06 pm](https://user-images.githubusercontent.com/14288989/40110079-b66f67f4-591c-11e8-85ce-f4470d511395.png)
 
