@@ -30,11 +30,12 @@ The dataset folder should contain images to be trained.
 
 ### Code :
 
-Currently the images (jpegs) belong to that of Trump and HH Dalai Lama are stored in the dataSet folder.
+Currently the images (jpegs) belong to that of Trump and HH Dalai Lama are stored in the ```dataSet``` folder in the current directory.
 
-You will notice that the file names/Ids on the Trump data set has a common '1' and HH Dalai Lama is set to '9', This distinguishes the labels for the faces and will help during prediction.
+You will notice that the file names/Ids on the Trump data set has a common '1' and HH Dalai Lama's images are set to '9', This distinguishes the labels for the faces and will help during prediction.
+More the images - more accurate the prediction. Ensure that the images have visible face profiles of the person you wish to identify and predict.
 
-If a new data set is to be created then enter an unique id/label for it as part of the file name.
+If a new data set is to be created then enter an unique id/label for it as part of the file name in the dataSet. (Again, ensure that you have sufficient images for better accuracy of prediction)
 
 e.g:  
 1. Einstein.8.1.jpeg
