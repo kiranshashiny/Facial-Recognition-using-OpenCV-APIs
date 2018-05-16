@@ -42,7 +42,7 @@ e.g:
 3. Einstein.8.3.jpeg
 
 
-First, download and run the code as follows.
+### Execute
 
 1. python3 trainer.py
  This will create the trainner.yml flat file containing the parameters of the images.
