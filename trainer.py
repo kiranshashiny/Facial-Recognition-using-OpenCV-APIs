@@ -5,6 +5,7 @@ from PIL import Image
 recognizer = cv2.face.LBPHFaceRecognizer_create()
 
 classifier = 'lbpcascade_frontalface.xml'
+# Your path may differ ,depending on where you have installed the cv library
 classifier_path='/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/cv2/data/'
 
 detector= cv2.CascadeClassifier(classifier_path+classifier)
@@ -29,6 +30,10 @@ def getImagesAndLabels(path):
         # extract the face from the training image sample
         faces=detector.detectMultiScale(imageNp)
         #If a face is there then append that in the list as well as Id of it
+        if (len(faces) == 0):
+            print ("There was no face detected in ", imagePath)
+            # Skip processing the image. Go to next one.
+            next
         for (x,y,w,h) in faces:
             faceSamples.append(imageNp[y:y+h,x:x+w])
             #print ("appending ", Id)
