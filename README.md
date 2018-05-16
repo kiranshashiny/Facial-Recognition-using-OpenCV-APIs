@@ -7,7 +7,7 @@ The Python code can be modified to recognize faces in Video streams as well.
 
 Here I have used the most commonly used face detection algorigthm called LBPH (Local Binary Patterns Histogram) to recognize, train faces and predict faces.
 
-Note: This does not detect images with no faces in them.
+**Note:** This does not detect images with no faces in them.
 
 The code is simple and is split into 2 parts.
 
@@ -17,7 +17,7 @@ The code is simple and is split into 2 parts.
 User will have to provide the input to be predicted and if the image matches the data in trained data, then the image and the corresponding label gets displayed on the screen. 
 
 
-Prerequisites :
+### Prerequisites :
 
 Install Python 3.x ( http://docs.python-guide.org/en/latest/starting/install3/linux/)
 Install Pip 
@@ -34,9 +34,9 @@ If a new data set is to be created then enter an unique id/label for it as part 
 To create a new dataSet, create images with <Image>.<UniqID>.1.jpeg 
 
 e.g:  
-Einstein.8.1.jpeg
-Einstein.8.2.jpeg
-Einstein.8.3.jpeg
+1. Einstein.8.1.jpeg
+2. Einstein.8.2.jpeg
+3. Einstein.8.3.jpeg
 
 
 First, download and run the code as follows.
@@ -47,15 +47,19 @@ First, download and run the code as follows.
 2. python3 detector_image.py  trump.jpeg
 	This will detect the image in the trained library and if it can recognize then a rectangle is printed on the face, along with the name.
 
-This can be further customized to user's specs. ( Just change the Id in the image.jpeg to whatever number you want.  e.g: Edison = 11, Think of this as a common label to the images. )
+This can be further customized to user's specs. ( Just change the Id in the image.jpeg to whatever number you want.  e.g: Edison could have a label as  11, Think of this as a common label to the images. )
+
+The blue box around the face is what gets detected by the Python API.
 
 ![screen shot 2018-05-16 at 3 20 06 pm](https://user-images.githubusercontent.com/14288989/40110079-b66f67f4-591c-11e8-85ce-f4470d511395.png)
+
+
 ![screen shot 2018-05-16 at 3 18 41 pm](https://user-images.githubusercontent.com/14288989/40110080-b69abe72-591c-11e8-8a42-5feba8d3a323.png)
 
 
+### Troubleshooting:
 
-### Troubleshooting;
-Check that the input file is present in the current folder when running the detector_image.py
+Check that the input image is present and valid in the current folder when running the detector_image.py code.
 
 Check that the trainner.yml exists after the images are trained before predicting a face.
 
