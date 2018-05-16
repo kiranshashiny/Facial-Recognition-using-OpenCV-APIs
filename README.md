@@ -38,8 +38,21 @@ First, download and run the code as follows.
 
 This can be further customized to user's specs. ( Just change the Id in the image.jpeg to whatever number you want.  e.g: Edison = 11, Think of this as a label to the image. )
 
+![screen shot 2018-05-16 at 3 20 06 pm](https://user-images.githubusercontent.com/14288989/40110079-b66f67f4-591c-11e8-85ce-f4470d511395.png)
+![screen shot 2018-05-16 at 3 18 41 pm](https://user-images.githubusercontent.com/14288989/40110080-b69abe72-591c-11e8-8a42-5feba8d3a323.png)
+
+
 
 ### Troubleshooting;
 Check that the input file is present in the current folder when running the detector_image.py
 
-Check that there are enough images in the /dataSet folder.
+Check that the trainner.yml exists after the images are trained before predicting a face.
+
+If this error message shows up - that means the input file is incorrect.
+
+	Image being processed :  dalailama.jpeg
+	OpenCV Error: Assertion failed (scn == 3 || scn == 4) in cvtColor, file /Users/travis/build/skvark/opencv-python/opencv/modules/imgproc/src/color.cpp, line 11111
+	Traceback (most recent call last):
+	  File "detector_image.py", line 30, in <module>
+	    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+	cv2.error: /Users/travis/build/skvark/opencv-python/opencv/modules/imgproc/src/color.cpp:11111: error: (-215) scn == 3 || scn == 4 in function cvtColor

@@ -1,7 +1,10 @@
-# Changes - I made recognizer.load -> recognizer-> read ()
-# I added the full path to the xml file.
-# The trainner.yml is in the current folder.
-# Python3 detector.py
+# 
+# This is the trainer code, when run it will create a trainner.yml external file.
+# The trainner.yml will contain the images being trained and it's parameters,
+# and will be stored in the current folder
+#
+# To run:
+# Python3 detector.py  <image.jpeg>
 # 
 import cv2
 import numpy as np
@@ -13,9 +16,31 @@ if (len ( sys.argv) > 1) :
 	image_name=sys.argv[1]
 	print ("Image being processed : ", image_name)
 else :
-	print (" Please provide the name of the image file to process as an argument")
+	print (" Please provide the name of the image to detect face.")
 	quit()
-	
+
+# Function to print text in the final image.
+def print_text(text_to_print):
+                print (  text_to_print )
+                font                   = cv2.FONT_HERSHEY_SIMPLEX
+                bottomLeftCornerOfText = (10,300)
+                fontScale              = 1
+                fontColor              = (255,255,255)
+                lineType               = 2
+
+                cv2.putText(img,text_to_print,
+                        bottomLeftCornerOfText,
+                        font,
+                        fontScale,
+                        fontColor,
+                        lineType)
+                cv2.imshow('image',img)
+                cv2.waitKey()
+                #cv2.waitKey(0)
+
+# End of function.
+
+# Code starts from here.	
 recognizer = cv2.face.LBPHFaceRecognizer_create()
 recognizer.read('trainner.yml')
 
@@ -50,43 +75,13 @@ for(x,y,w,h) in faces:
         elif (conf < 50):
             if ( Id == 9) :
                 Id="DalaiLama"
-                print ( "This is Dalai Lama's image")
-                Id="Dalai"
-                font                   = cv2.FONT_HERSHEY_SIMPLEX
-                bottomLeftCornerOfText = (10,300)
-                fontScale              = 1
-                fontColor              = (255,255,255)
-                lineType               = 2
-
-                cv2.putText(img,'Dalai Lama ',
-                        bottomLeftCornerOfText,
-                        font,
-                        fontScale,
-                        fontColor,
-                        lineType)
-                cv2.imshow('image',img)
-                cv2.waitKey(0)
+                print_text ( "HH Dalai Lama")
 
             elif (Id==1):
-                print ( "This is Trump's image")
-                Id="Trump"
-                font                   = cv2.FONT_HERSHEY_SIMPLEX
-                bottomLeftCornerOfText = (10,300)
-                fontScale              = 1
-                fontColor              = (255,255,255)
-                lineType               = 2
-        
-                cv2.putText(img,'Trump ',
-        		bottomLeftCornerOfText,
-        		font,
-        		fontScale,
-        		fontColor,
-        		lineType)
-                cv2.imshow('image',img) 
-                cv2.waitKey(0)
+                print_text ( "Donald Trump")
 
             else:
-                print ( "This is NOT Trump's ")
+                print ( "This is NOT identified ! ")
                 Id="Unknown"
                 font                   = cv2.FONT_HERSHEY_SIMPLEX
                 bottomLeftCornerOfText = (10,300)
