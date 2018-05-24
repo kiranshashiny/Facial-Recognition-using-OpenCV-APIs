@@ -1,4 +1,4 @@
-# OpenCV_RecognizeFaces
+# Facial Recognition using Open CV APIs in Python
 This article is about how to recognize faces, train and predict faces in images/photos (Jpeg, jpg) using OpenCV Python APis.
 
 To learn more about the Open CV APIs refer : https://docs.opencv.org/3.0-beta/doc/py_tutorials/py_tutorials.html
