@@ -59,6 +59,9 @@ if ( len (faces ) == 0) :
 	print( "No identifiable faces found, Please select a correct image as input !")
 	print( "Please check on the quality of the print, clarity of data in the image")
 	print ("Try another image that is a little more clearer")
+	cv2.imshow('image',img)
+	cv2.waitKey(0)
+	cv2.destroyAllWindows()	
 	quit()
 
 for(x,y,w,h) in faces:
