@@ -23,9 +23,9 @@ Install Python 3.x ( http://docs.python-guide.org/en/latest/starting/install3/li
 
 Install Pip 
 
-Install cv2 ( Google )
+Install cv2 ( Google for installing instructions. )
 
-The dataset folder should contain images to be trained. 
+The dataset/ folder in the curent folder should contain images to be trained. 
 
 
 ### Code :
@@ -45,11 +45,13 @@ e.g:
 
 ### Execute
 
-1. python3 trainer.py
- This will create the ```trainner.yml``` flat file containing the parameters of the images.
+	1. python3 trainer.py
 
-2. python3 detector_image.py  trump.jpeg
-	This will detect the image in the trained library and if it can recognize then a rectangle is printed on the face, along with the name.
+This will create the ```trainner.yml``` flat file containing the parameters of the images.
+
+	2. python3 detector_image.py  <trump.jpeg>
+
+This will detect the image in the trained library and if it can recognize then a rectangle is printed on the face, along with the name.
 
 This can be further customized to user's specs. ( Just change the Id in the image.jpeg to whatever number you want.  e.g: Edison could have a label as  11, Think of this as a common label to the images. )
 
@@ -77,3 +79,24 @@ If this error message shows up - that means the input file is incorrect.
 	  File "detector_image.py", line 30, in <module>
 	    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 	cv2.error: /Users/travis/build/skvark/opencv-python/opencv/modules/imgproc/src/color.cpp:11111: error: (-215) scn == 3 || scn == 4 in function cvtColor
+
+
+
+If this error message shows up - that means PIL is not installed.
+
+
+		pip3 install image
+		Collecting image
+		  Downloading https://files.pythonhosted.org/packages/0c/ec/51969468a8b87f631cc0e60a6bf1e5f6eec8ef3fd2ee45dc760d5a93b82a/image-1.5.27-py2.py3-none-any.whl
+		Collecting pillow (from image)
+		  Downloading https://files.pythonhosted.org/packages/8f/f3/c6d351d7e582e4f2ef4343c9be1f0472cb249fb69695e68631e337f4b6e9/Pillow-6.1.0-cp37-cp37m-macosx_10_6_intel.macosx_10_9_intel.macosx_10_9_x86_64.macosx_10_10_intel.macosx_10_10_x86_64.whl (3.8MB)
+		     |████████████████████████████████| 3.9MB 2.4MB/s 
+		Collecting django (from image)
+		  Downloading https://files.pythonhosted.org/packages/94/9f/a56f7893b1280e5019482260e246ab944d54a9a633a01ed04683d9ce5078/Django-2.2.5-py3-none-any.whl (7.5MB)
+		     |████████████████████████████████| 7.5MB 1.8MB/s 
+		Collecting sqlparse (from django->image)
+		  Downloading https://files.pythonhosted.org/packages/ef/53/900f7d2a54557c6a37886585a91336520e5539e3ae2423ff1102daf4f3a7/sqlparse-0.3.0-py2.py3-none-any.whl
+		Collecting pytz (from django->image)
+		  Using cached https://files.pythonhosted.org/packages/87/76/46d697698a143e05f77bec5a526bf4e56a0be61d63425b68f4ba553b51f2/pytz-2019.2-py2.py3-none-any.whl
+		Installing collected packages: pillow, sqlparse, pytz, django, image
+		Successfully installed django-2.2.5 image-1.5.27 pillow-6.1.0 pytz-2019.2 sqlparse-0.3.0

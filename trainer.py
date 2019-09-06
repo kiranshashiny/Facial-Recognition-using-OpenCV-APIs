@@ -12,7 +12,11 @@ recognizer = cv2.face.LBPHFaceRecognizer_create()
 
 classifier = 'lbpcascade_frontalface.xml'
 # Your path may differ ,depending on where you have installed the cv library
-classifier_path='/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/cv2/data/'
+# old path - now it could be different.
+#classifier_path='/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/cv2/data/'
+
+classifier_path='/Users/shashikiran/nodetest/opencv/opencv/data/haarcascades/'
+
 
 detector= cv2.CascadeClassifier(classifier_path+classifier)
 
