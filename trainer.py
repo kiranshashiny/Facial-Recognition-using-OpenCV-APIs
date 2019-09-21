@@ -18,7 +18,7 @@ classifier = 'lbpcascade_frontalface.xml'
 classifier_path='/Users/shashikiran/nodetest/opencv/opencv/data/haarcascades/'
 
 
-detector= cv2.CascadeClassifier(classifier_path+classifier)
+detector= cv2.CascadeClassifier('/Users/shashikiran/nodetest/opencvsources/opencv/data/lbpcascades/lbpcascade_frontalface.xml')
 
 def getImagesAndLabels(path):
     #get the path of all the files in the folder
@@ -31,6 +31,7 @@ def getImagesAndLabels(path):
     #now looping through all the image paths and loading the Ids and the images
     for imagePath in imagePaths:
         #loading the image and converting it to gray scale
+        print ("Working on ...", imagePath) 
         pilImage=Image.open(imagePath).convert('L')
         #Now we are converting the PIL image into numpy array
         imageNp=np.array(pilImage,'uint8')
