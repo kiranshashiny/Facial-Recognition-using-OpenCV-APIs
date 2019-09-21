@@ -44,10 +44,10 @@ def print_text(text_to_print):
 recognizer = cv2.face.LBPHFaceRecognizer_create()
 recognizer.read('trainner.yml')
 
-classifier = 'lbpcascade_frontalface.xml'
-classifier_path='/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/cv2/data/'
+#classifier = 'lbpcascade_frontalface.xml'
+#classifier_path='/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/cv2/data/'
 
-faceCascade= cv2.CascadeClassifier(classifier_path+classifier)
+faceCascade= cv2.CascadeClassifier('/Users/shashikiran/nodetest/opencvsources/opencv/data/lbpcascades/lbpcascade_frontalface.xml')
 
 img = cv2.imread(image_name)
 font = cv2.FONT_HERSHEY_SIMPLEX
